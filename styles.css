@@ -1,0 +1,170 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundSlide 10s infinite linear;
+}
+@keyframes backgroundSlide {
+    0% {
+        background-image: url('./carousel1.jpg');
+    }
+    50% {
+        background-image: url('./carousel1.jpg');
+    }
+    50.01% {
+        background-image: url('./carousel2.jpg');
+    }
+    100% {
+        background-image: url('./carousel2.jpg');
+    }
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%; /* Adjust height as needed */
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-items {
+    display: flex;
+    width: 200%; /* Twice the width to accommodate two images */
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-item {
+    flex: 1 0 100%;
+    min-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-container {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+   /* Transparent background to make text readable */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 90px;
+    overflow-y: auto;
+    animation:backgroundColor 10s infinite linear;
+}
+
+@keyframes backgroundColor {
+    0% {
+        background:  linear-gradient(to right, rgb(190, 231, 250), rgb(250, 185, 185)) ;
+    }
+   
+    100% {
+        background-color: rgb(250, 228, 233);
+    }
+}
+
+.dropzone {
+    padding-top: 100px;
+    border: 2px dashed orangered;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+    height:200px;
+}
+
+.dropzone.dragover {
+    border-color: #000;
+    background-color: #e0e0e0;
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+}
+
+.file-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fffece;
+}
+.file-name:hover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #bdd6fd;
+}
+
+.file-name img.thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 60px;
+    margin-right: 10px;
+}
+
+
+.file-name textarea {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.file-name .icons {
+    display: flex;
+    gap: 10px;
+}
+
+.file-name .icons .check,
+.file-name .icons .delete {
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.file-name .icons .check:hover {
+    color: green;
+}
+
+.file-name .icons .delete:hover {
+    color: red;
+}
+h1{
+    color:orangered;
+}
+.atag{
+    color: orangered;
+}
